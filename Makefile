@@ -1,28 +1,34 @@
-NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
-FILES		= ft_*.c
-OBJ			= $(FILES:%.c=%.o)
+NAME=libft.a
 
-all: $(NAME)
+CC=gcc
 
-# This won't run if the .o files don't exist or are not modified
-$(NAME): $(OBJ)
+CFLAGS=-Wall -Wextra -Werror -O3
+
+RM=rm -f
+
+LDFLAGS=-L.
+
+LDLIBS=-lft
+
+HDDIRS=-I includes/
+
+SRC=ft_*.c
+
+OBJ=$(SRC:.c=.o)
+
+$(NAME): includes/libft.h
+	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-# This won't run if the source files don't exist or are not modified
-$(OBJ): $(FILES)
-	gcc $(CFLAGS) $(FILES)
+all: $(NAME)
 
 clean:
-	rm -f $(OBJ)
-	#rm -f $(FILES) # comment this line if you don't want it to remove the source files from the root
+	$(RM) $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-# I use .PHONY to make sure that gnu make will still run even if files called
-# clean / fclean / all and re already exist in the directory
-.PHONY: clean fclean all re
+.PHONY: clean fclean
