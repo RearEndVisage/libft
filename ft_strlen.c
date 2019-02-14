@@ -6,13 +6,13 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/05 17:11:32 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/12 16:50:14 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/13 19:05:34 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+unsigned int	ft_strlen(const char *str)
 {
 	int i;
 
