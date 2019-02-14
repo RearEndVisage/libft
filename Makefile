@@ -1,30 +1,23 @@
-NAME=libft.a
-
-CC=gcc
-
-CFLAGS=-Wall -Wextra -Werror
-
-RM=rm -f
-
-INCLUDES=-I.
-
-SRC=ft_*.c
-
-OBJ=$(SRC:.c=.o)
-
-$(NAME):  $(OBJ)
-	$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+NAME		= libft.a
+CFLAGS		= -Wall -Werror -Wextra -I. -c
+FILES		= ft_*.c
+OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
 
+$(NAME): $(OBJ)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+$(OBJ): $(FILES)
+	gcc $(CFLAGS) $(FILES)
+
 clean:
-	$(RM) $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean
+.PHONY: clean fclean all re
