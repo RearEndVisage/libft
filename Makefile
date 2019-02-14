@@ -2,22 +2,18 @@ NAME=libft.a
 
 CC=gcc
 
-CFLAGS=-Wall -Wextra -Werror -O3
+CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-LDFLAGS=-L.
-
-LDLIBS=-lft
-
-HDDIRS=-I.
+INCLUDES=-I.
 
 SRC=ft_*.c
 
 OBJ=$(SRC:.c=.o)
 
 $(NAME):  $(OBJ)
-	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
+	$(CC) $(CFLAGS) -c $(SRC) $(INCLUDES)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
