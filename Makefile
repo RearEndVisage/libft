@@ -1,5 +1,4 @@
 SRC = *.c
-INC = libft.h
 OBJ = *.o
 
 CC = gcc
@@ -10,7 +9,7 @@ all: $(NAME)
 
 $(NAME):
 	@echo "\033[32mmaking libft...\033[0m"
-	@$(CC) $(CFLAGS) -c $(SRC) -I $(INC)
+	@$(CC) $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
