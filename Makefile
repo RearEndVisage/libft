@@ -1,3 +1,4 @@
+NAME = libft.a
 SRC = *.c
 OBJ = *.o
 
