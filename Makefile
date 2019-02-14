@@ -10,13 +10,13 @@ LDFLAGS=-L.
 
 LDLIBS=-lft
 
-HDDIRS=-I includes/
+HDDIRS=-I.
 
 SRC=ft_*.c
 
 OBJ=$(SRC:.c=.o)
 
-$(NAME): includes/libft.h
+$(NAME):  $(OBJ)
 	$(CC) $(CFLAGS) -c $(SRC) $(HDDIRS)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
