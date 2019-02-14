@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:49:36 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 16:38:03 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/13 16:59:53 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_atoi(char *str)
 
 	n = 0;
 	sign = 1;
-	if (!str[i])
+	if (!(*str))
 		return (0);
 	while (*str == '\n' || *str == ' ' || *str == '\t' || *str == '\r' ||
 	*str == '\v' || *str == '\f')
