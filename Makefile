@@ -1,5 +1,5 @@
 NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -I. -c
+CFLAGS		= -Wall -Werror -Wextra -c
 FILES		= ft_*.c
 OBJ			= $(FILES:%.c=%.o)
 
