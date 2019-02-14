@@ -1,23 +1,28 @@
-NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra -c
-FILES		= ft_*.c
-OBJ			= $(FILES:%.c=%.o)
+SRC = *.c
+INC = libft.h
+OBJ = *.o
 
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+.PHONY: all
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME):
+	@echo "\033[32mmaking libft...\033[0m"
+	@$(CC) $(CFLAGS) -c $(SRC) -I $(INC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
-$(OBJ): $(FILES)
-	gcc $(CFLAGS) $(FILES)
-
+.PHONY: clean
 clean:
-	rm -f $(OBJ)
+	@echo "\033[33mcleaning libft repository...\033[0m"
+	@/bin/rm -f $(OBJ)
 
+.PHONY: fclean
 fclean: clean
-	rm -f $(NAME)
+	@echo "\033[33mremoving libft library file...\033[0m"
+	@/bin/rm -f $(NAME)
 
+.PHONY: re
 re: fclean all
-
-.PHONY: clean fclean all re
