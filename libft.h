@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:04:54 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 19:05:21 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/14 16:36:40 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ unsigned int		ft_strlen(const char *str);
 char				*ft_strncat(char *dest, char *src, int nb);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dest, char *src, size_t n);
-char				*ft_strnstr(const char *str, const char *to_find, size_t len);
+char				*ft_strnstr(const char *haystack, const char *needle, size_t len)
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(char *str, char *to_find);
 int					ft_tolower(int c);
