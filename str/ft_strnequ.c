@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 01:10:16 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 18:51:56 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/15 16:45:05 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/15 16:46:27 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (c >= 0 && c <= 127)
+	if (s1 && s2 && !ft_strncmp(s1, s2, n))
 		return (1);
 	return (0);
 }

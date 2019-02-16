@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 18:50:26 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/14 16:34:12 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/15 15:16:13 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/15 15:31:35 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnew(size_t size)
 {
-	size_t	i;
-	size_t	n;
-
-	if (!needle[0])
-		return ((char*)haystack);
-	i = 0;
-	while (haystack[i])
-	{
-		n = 0;
-		while (needle[n] == haystack[i + n] && i + n < len)
-			if (!needle[n++])
-				return ((char*)&haystack[i]);
-		if (n != 0 && !needle[n])
-			return ((char*)&haystack[i]);
-		i++;
-	}
-	return (NULL);
+	return ((char*)ft_memalloc(size + 1));
 }

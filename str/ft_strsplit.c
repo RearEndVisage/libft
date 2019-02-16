@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 17:50:45 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 17:55:54 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/15 19:20:22 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/15 19:52:25 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	**ft_strsplit(char const *s, char c)
 {
-	char	*str;
+	char	**strings;
+	int		i;
+	int		len;
+	int		numwords;
 
-	str = (char*)s;
-	while (*str != c)
+	if (!s)
+		return (NULL);
+	i = 0;
+	numwords = ft_wordcount(s, c);
+	if (!(strings = (char**)ft_memalloc((numwords + 1) * sizeof(char*))))
+		return (NULL);
+	while (numwords--)
 	{
-		if (*str == '\0')
+		while (*s == c && *s)
+			s++;
+		len = ft_wordlen(s, c);
+		if (!(strings[i] = ft_strsub(s, 0, len)))
 			return (NULL);
-		str++;
+		s += len;
+		i++;
 	}
-	return (str);
+	strings[i] = NULL;
+	return (strings);
 }
