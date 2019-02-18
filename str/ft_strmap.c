@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 16:19:07 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:41:15 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/17 17:49:39 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = -1;
 	if (s && f)
 	{
-		if(!(new = ft_strnew(ft_strlen(s))))
+		if (!(new = ft_strnew(ft_strlen(s))))
 			return (NULL);
 		while (s[++i])
 			new[i] = f(s[i]);

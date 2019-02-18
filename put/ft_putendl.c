@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 16:52:49 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:38:45 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/17 17:48:44 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl(char const *s)
 {
 	if (!s)
-		return;
+		return ;
 	ft_putstr(s);
 	ft_putchar('\n');
 }

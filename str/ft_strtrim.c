@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 17:10:17 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:41:05 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/17 17:50:28 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ char	*ft_strtrim(char const *s)
 	char	*new;
 	int		i;
 	int		j;
-	int	 	len;
+	int		len;
 
 	if (!s)
 		return (NULL);
 	i = 0;
-	len = ft_strlen (s);
+	len = ft_strlen(s);
 	while (ft_isspace(s[i]))
 		i++;
 	while (ft_isspace(s[len - 1]))
