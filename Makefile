@@ -8,7 +8,9 @@ MEM = mem/*.c
 
 STR = str/*.c
 
-SRC = $(CHK) $(CNV) $(MEM) $(STR)
+PUT = put/*.c
+
+SRC = $(CHK) $(CNV) $(MEM) $(STR) $(PUT)
 INC = inc
 OBJ = *.o
 

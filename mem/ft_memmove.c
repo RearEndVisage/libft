@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 00:52:55 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 16:21:21 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:38:21 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

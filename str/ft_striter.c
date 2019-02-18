@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 15:49:00 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 16:12:38 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:15 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

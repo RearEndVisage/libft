@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_digits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 15:50:13 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:36:54 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/16 15:59:30 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/16 22:36:34 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		ft_isdigit(int c)
+int		ft_digits(int n)
 {
-	if (c >= '0' && c <= '9')
+	int digits;
+
+	if (!n)
 		return (1);
-	return (0);
+	digits = 0;
+	while (n)
+	{
+		n /= 10;
+		digits++;
+	}
+	return (digits);
 }

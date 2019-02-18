@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 17:17:34 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 17:18:57 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:37:04 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_isspace(char const c)
 {

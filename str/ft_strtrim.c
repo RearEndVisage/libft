@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 17:10:17 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 19:12:39 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:05 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strtrim(char const *s)
 {
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s)
 	while (ft_isspace(s[len - 1]))
 		len--;
 	len = len - i;
-	if (!(new = (char*)ft_memalloc(len >= 0 ? len + 1 : 1)))
+	if (!(new = (char*)ft_strnew(len >= 0 ? len : 0)))
 		return (NULL);
 	j = -1;
 	while (++j < len)

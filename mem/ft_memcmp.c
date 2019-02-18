@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 01:05:47 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 13:15:16 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:38:03 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 19:30:47 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 14:48:25 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:37:15 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_wordlen(char const *s, char const c)
 {

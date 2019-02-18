@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:04:54 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 19:52:07 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/17 15:37:45 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t size);
@@ -60,15 +67,18 @@ char				*ft_strnew(size_t size);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
+void				ft_putstr(char const *s);
+void				ft_putchar(char c);
+void				ft_putnbr(int n);
+void				ft_putendl(char const *s);
+void				ft_putstr_fd(char const *s, int fd);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putendl_fd(char const *s, int fd);
 
 int					ft_isspace(char const c);
 int					ft_wordlen(char const *s, char const c);
 int					ft_wordcount(char const *s, char const c);
+int					ft_digits(int n);
 
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
 #endif

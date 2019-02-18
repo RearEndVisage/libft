@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 15:50:13 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:36:54 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/16 18:51:10 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/16 18:52:40 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
-int		ft_isdigit(int c)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	new->next = (*alst);
+	(*alst) = new;
 }

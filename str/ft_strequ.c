@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 16:39:21 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 16:43:31 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:15 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_strequ(char const *s1, char const *s2)
 {

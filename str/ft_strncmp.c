@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 18:16:15 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 16:34:17 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:15 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

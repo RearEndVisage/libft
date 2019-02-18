@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 12:16:22 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 12:21:31 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:38:11 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

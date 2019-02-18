@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:50:20 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/12 16:50:12 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:37:00 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_isprint(int c)
 {

@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 19:20:22 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:41:15 by cmckelvy         ###   ########.fr       */
+/*   Created: 2018/11/05 18:19:39 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/16 19:08:00 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char	**strings;
-	int		i;
-	int		len;
-	int		numwords;
+	t_list	*list;
 
-	if (!s)
+	if (!(list = (t_list*)ft_memalloc(sizeof(t_list))))
 		return (NULL);
-	i = 0;
-	numwords = ft_wordcount(s, c);
-	if (!(strings = (char**)ft_memalloc((numwords + 1) * sizeof(char*))))
-		return (NULL);
-	while (numwords--)
+	if (!content)
 	{
-		while (*s == c && *s)
-			s++;
-		len = ft_wordlen(s, c);
-		if (!(strings[i] = ft_strsub(s, 0, len)))
-			return (NULL);
-		s += len;
-		i++;
+		list->content = NULL;
+		list->content_size = 0;
 	}
-	strings[i] = NULL;
-	return (strings);
+	else
+	{
+		if (!(list->content = ft_memalloc(content_size)))
+		{
+			free(list);
+			return (NULL);
+		}
+		ft_memcpy((list->content), content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }

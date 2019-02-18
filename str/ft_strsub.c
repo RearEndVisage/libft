@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 16:49:36 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/15 16:53:46 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:00 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char*	ft_strsub(char const *s, unsigned int start, size_t len)
 {
@@ -18,7 +18,7 @@ char*	ft_strsub(char const *s, unsigned int start, size_t len)
 	int i;
 
 	i = 0;
-	if (!(new = ft_memalloc(len + 1)) || !s)
+	if (!(new = ft_strnew(len)) || !s)
 		return (NULL);
 	while (len--)
 	{

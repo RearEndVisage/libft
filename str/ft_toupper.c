@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 01:11:48 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/13 01:16:43 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:41:10 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_toupper(int c)
 {

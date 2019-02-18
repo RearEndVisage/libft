@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:50:04 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/12 16:44:47 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/16 22:36:43 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_isalpha(int c)
 {
