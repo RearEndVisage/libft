@@ -6,13 +6,13 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 15:49:36 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 22:37:23 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:04:23 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int n;
 	int sign;

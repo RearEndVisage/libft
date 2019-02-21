@@ -10,7 +10,9 @@ STR = str/*.c
 
 PUT = put/*.c
 
-SRC = $(CHK) $(CNV) $(MEM) $(STR) $(PUT)
+GET = get/*.c
+
+SRC = $(CHK) $(CNV) $(MEM) $(STR) $(PUT) $(GET)
 INC = inc
 OBJ = *.o
 
@@ -21,19 +23,19 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	@echo "making libft..."
+	@echo -e "\033[92mmaking libft...\033[0m"
 	@$(CC) $(CFLAGS) -c $(SRC) -I $(INC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
 .PHONY: clean
 clean:
-	@echo "cleaning libft repository..."
+	@echo -e "\033[33mcleaning libft repository...\033[0m"
 	@/bin/rm -f $(OBJ)
 
 .PHONY: fclean
 fclean: clean
-	@echo "removing libft library file..."
+	@echo -e "\033[31mremoving libft library file...\033[0m"
 	@/bin/rm -f $(NAME)
 
 .PHONY: re

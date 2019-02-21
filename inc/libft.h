@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:04:54 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/17 17:47:11 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/21 13:03:14 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "get_next_line.h"
 
 typedef struct	s_list
 {
@@ -23,7 +24,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t size);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
@@ -41,8 +42,8 @@ char			*ft_strchr(char const *s, int c);
 int				ft_strcmp(char const *s1, char const *s2);
 char			*ft_strcpy(char *dest, char const *src);
 char			*ft_strdup(char const *src);
-unsigned int	ft_strlcat(char *dest, char const *src, unsigned int size);
-unsigned int	ft_strlen(char const *str);
+size_t			ft_strlcat(char *dest, char const *src, size_t size);
+size_t			ft_strlen(char const *str);
 char			*ft_strncat(char *dest, char const *src, int nb);
 int				ft_strncmp(char const *s1, char const *s2, size_t n);
 char			*ft_strncpy(char *dest, char const*src, size_t n);
@@ -55,6 +56,7 @@ int				ft_toupper(int c);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 void			ft_strclr(char *s);
+char			*ft_strccpy(char *dst, char *src, char c);
 void			ft_strdel(char **ap);
 int				ft_strequ(char const *s1, char const *s2);
 void			ft_striter(char *s, void (*f)(char *));

@@ -1,40 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 19:20:22 by cmckelvy          #+#    #+#             */
+/*   Created: 2019/02/13 01:11:48 by cmckelvy          #+#    #+#             */
 /*   Updated: 2019/02/17 17:12:17 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+int		ft_toupper(int c)
 {
-	char	**strings;
-	int		i;
-	int		len;
-	int		numwords;
-
-	if (!s)
-		return (NULL);
-	i = 0;
-	numwords = ft_wordcount(s, c);
-	if (!(strings = (char**)ft_memalloc((numwords + 1) * sizeof(char*))))
-		return (NULL);
-	while (numwords--)
-	{
-		while (*s == c && *s)
-			s++;
-		len = ft_wordlen(s, c);
-		if (!(strings[i] = ft_strsub(s, 0, len)))
-			return (NULL);
-		s += len;
-		i++;
-	}
-	strings[i] = NULL;
-	return (strings);
+	if (c >= 'a' && c <= 'z')
+		return (c - 'a' + 'A');
+	return (c);
 }

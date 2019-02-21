@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 18:50:28 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/16 18:52:37 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/18 12:56:29 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/21 12:59:49 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 68
+# define ERROR_CHECK(x) if (x) return (-1)
+# define BREAK_CHECK(x) if (x) break
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
-{
-	while (*alst)
-	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		(*alst) = (*alst)->next;
-	}
-	(*alst) = NULL;
-}
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+
+int		get_next_line(const int fd, char **line);
+
+#endif

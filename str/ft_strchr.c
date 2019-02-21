@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 17:50:45 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/17 17:44:33 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/17 17:40:46 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
+	int i;
 
-	str = (char*)s;
-	while (*str != c)
-	{
-		if (*str == '\0')
+	i = 0;
+	while (s[i] != c)
+		if (s[i++] == '\0')
 			return (NULL);
-		str++;
-	}
-	return (str);
+	return ((char*)&s[i]);
 }
