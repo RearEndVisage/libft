@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 10:23:07 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/25 18:53:36 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/27 15:16:12 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/27 15:19:16 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_itoa_base(int n, int base)
 {
-	size_t i;
-	size_t j;
-	size_t k;
+	char	*result;
+	int		sign;
+	int		len;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[k] != '\0')
-		k++;
-	if (size <= i)
-		k += size;
-	else
-		k += i;
-	j = 0;
-	while (src[j] != '\0' && i < size - 1)
+	sign = 1;
+	if (n < 0)
+		sign = 2;
+	len = ft_digits_base(n, base) + (sign - 1);
+	if (sign == 2)
+		sign -= 3;
+	if (!(result = (char*)ft_strnew(len + 1)))
+		return (NULL);
+	if (n == 0)
+		result[0] = '0';
+	len--;
+	while (n)
 	{
-		dest[i] = src[j];
-		++j;
-		++i;
+		result[len] = (n % base) * sign + (n % base > 9 ? 'A' - 10 : '0');
+		n /= base;
+		len--;
 	}
-	dest[i] = '\0';
-	return (k);
+	if (sign == -1)
+		result[len] = '-';
+	return (result);
 }

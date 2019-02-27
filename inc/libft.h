@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:04:54 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/21 13:03:14 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/02/27 15:27:32 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int n, int base);
 
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -90,6 +91,8 @@ int				ft_isspace(char const c);
 int				ft_wordlen(char const *s, char const c);
 int				ft_wordcount(char const *s, char const c);
 int				ft_digits(int n);
+int				ft_digits_base(int n, int base);
+
 void			ft_lstsort(t_list **begin_list, int (*cmp)());
 
 #endif

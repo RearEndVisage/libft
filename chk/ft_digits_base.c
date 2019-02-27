@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_digits_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 10:23:07 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/02/25 18:53:36 by cmckelvy         ###   ########.fr       */
+/*   Created: 2019/02/27 15:15:00 by cmckelvy          #+#    #+#             */
+/*   Updated: 2019/02/27 15:15:32 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+int		ft_digits_base(int n, int base)
 {
-	size_t i;
-	size_t j;
-	size_t k;
+	int digits;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[k] != '\0')
-		k++;
-	if (size <= i)
-		k += size;
-	else
-		k += i;
-	j = 0;
-	while (src[j] != '\0' && i < size - 1)
+	if (!n)
+		return (1);
+	digits = 0;
+	while (n)
 	{
-		dest[i] = src[j];
-		++j;
-		++i;
+		n /= base;
+		digits++;
 	}
-	dest[i] = '\0';
-	return (k);
+	return (digits);
 }
