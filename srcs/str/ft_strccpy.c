@@ -6,11 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 16:56:51 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/03/04 16:57:22 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/03/04 17:02:52 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static char		*ft_strccpy(char *dst, char *src, char c)
+char		*ft_strccpy(char *dst, char *src, char c)
 {
 	int i;
 
