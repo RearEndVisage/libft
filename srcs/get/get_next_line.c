@@ -6,25 +6,11 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 12:53:59 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/03/04 15:01:20 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/03/04 16:59:34 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char			*ft_strccpy(char *dst, char *src, char c)
-{
-	int i;
-
-	i = 0;
-	while (src[i] && src[i] != c)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
 
 static t_list		*get_file(const int fd, t_list **file)
 {
