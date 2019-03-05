@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 13:04:54 by cmckelvy          #+#    #+#             */
-/*   Updated: 2019/03/04 16:57:38 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2019/03/04 16:58:23 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char			*ft_strcat(char *dest, char const *src);
 char			*ft_strchr(char const *s, int c);
 int				ft_strcmp(char const *s1, char const *s2);
 char			*ft_strcpy(char *dest, char const *src);
-static char		*ft_strccpy(char *dst, char *src, char c);
+char		*ft_strccpy(char *dst, char *src, char c);
 char			*ft_strdup(char const *src);
 size_t			ft_strlcat(char *dest, char const *src, size_t size);
 size_t			ft_strlen(char const *str);
