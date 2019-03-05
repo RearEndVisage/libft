@@ -1,19 +1,21 @@
 NAME = libft.a
 
-CHK = chk/*.c \
+CHK = srcs/chk/*.c
 
-CNV = cnv/*.c \
+CNV = srcs/cnv/*.c
 
-MEM = mem/*.c
+MEM = srcs/mem/*.c
 
-STR = str/*.c
+STR = srcs/str/*.c
 
-PUT = put/*.c
+PUT = srcs/put/*.c
 
-GET = get/*.c
+GET = srcs/get/*.c
 
-SRC = $(CHK) $(CNV) $(MEM) $(STR) $(PUT) $(GET)
-INC = inc
+LST = srcs/lst/*.c
+
+SRC = $(CHK) $(CNV) $(MEM) $(STR) $(PUT) $(GET) $(LST)
+INC = includes/
 OBJ = *.o
 
 CC = gcc
@@ -31,12 +33,12 @@ $(NAME):
 .PHONY: clean
 clean:
 	@echo -e "\033[33mcleaning libft repository...\033[0m"
-	@/bin/rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 .PHONY: fclean
 fclean: clean
 	@echo -e "\033[31mremoving libft library file...\033[0m"
-	@/bin/rm -f $(NAME)
+	@rm -f $(NAME)
 
 .PHONY: re
 re: fclean all
