@@ -52,6 +52,7 @@ STR = srcs/str/ft_strcat.c \
 	  srcs/str/ft_strnew.c \
 	  srcs/str/ft_strrchr.c \
 	  srcs/str/ft_strstr.c \
+	  srcs/str/ft_strccpy.c \
 	  srcs/str/ft_strtrim.c
 
 PUT = srcs/put/ft_putchar.c \
